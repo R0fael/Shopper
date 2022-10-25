@@ -41,22 +41,23 @@ class CardWidget extends StatelessWidget {
                   ],
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                        width: width * 0.70,
-                        height: height * 0.70,
+                        width: width * 0.60,
+                        height: height * 0.60,
                         child: const Image(
                           image: NetworkImage(
-                            'https://c.mql5.com/1/224/scale_1200.png',
+                            'https://programmir.ru/static/admin/img/bg.png',
                           ),
                         )),
                     Text(name,
                         style: const TextStyle(
-                            fontSize: 25.00,
+                            fontSize: 20.00,
                             color: Color.fromARGB(255, 75, 75, 75))),
                     Text(cost,
                         style: const TextStyle(
-                            fontSize: 20.00,
+                            fontSize: 15.00,
                             color: Color.fromARGB(255, 126, 126, 126))),
                   ],
                 ),
