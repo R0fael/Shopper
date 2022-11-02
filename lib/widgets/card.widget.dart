@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:shop/controllers/home.cl.dart';
 
 class CardWidget extends StatelessWidget {
-  const CardWidget({
-    Key? key,
-    required this.name,
-    required this.cost,
-    this.width = 200,
-    this.height = 200,
-    this.url = 'https://c.mql5.com/1/224/scale_1200.png',
-  }) : super(key: key);
+  const CardWidget(
+      {Key? key,
+      required this.name,
+      required this.cost,
+      this.width = 200,
+      this.height = 200,
+      required this.url})
+      : super(key: key);
 
   final String name;
   final String cost;
@@ -48,7 +49,7 @@ class CardWidget extends StatelessWidget {
                         height: height * 0.60,
                         child: const Image(
                           image: NetworkImage(
-                            'https://programmir.ru/static/admin/img/bg.png',
+                            "",
                           ),
                         )),
                     Text(name,
