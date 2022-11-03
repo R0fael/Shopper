@@ -14,7 +14,7 @@ class CardWidget extends StatelessWidget {
       : super(key: key);
 
   final String name;
-  final String cost;
+  final double cost;
   final double width;
   final double height;
   final String url;
@@ -56,7 +56,7 @@ class CardWidget extends StatelessWidget {
                         style: const TextStyle(
                             fontSize: 20.00,
                             color: Color.fromARGB(255, 75, 75, 75))),
-                    Text(cost,
+                    Text(cost.toString(),
                         style: const TextStyle(
                             fontSize: 15.00,
                             color: Color.fromARGB(255, 126, 126, 126))),

@@ -7,6 +7,7 @@ import 'package:shop/models/product_model.dart';
 class HomeCl extends GetxController {
   ProductModel? product;
   List<ProductModel> products = [];
+  int a = 0;
 
   Future<void> fetchAlbum() async {
     final response =
