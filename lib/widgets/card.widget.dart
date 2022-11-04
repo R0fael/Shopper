@@ -2,22 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:shop/controllers/home.cl.dart';
+import 'package:shop/models/product_model.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget(
-      {Key? key,
-      required this.name,
-      required this.cost,
-      this.width = 200,
-      this.height = 200,
-      required this.url})
+      {Key? key, this.width = 200, this.height = 200, required this.model})
       : super(key: key);
 
-  final String name;
-  final double cost;
+  final ProductModel model;
+
   final double width;
   final double height;
-  final String url;
 
   @override
   Widget build(BuildContext context) {
@@ -52,11 +47,11 @@ class CardWidget extends StatelessWidget {
                             "",
                           ),
                         )),
-                    Text(name,
+                    Text(model.title,
                         style: const TextStyle(
                             fontSize: 20.00,
                             color: Color.fromARGB(255, 75, 75, 75))),
-                    Text(cost.toString(),
+                    Text(model.price.toString(),
                         style: const TextStyle(
                             fontSize: 15.00,
                             color: Color.fromARGB(255, 126, 126, 126))),

@@ -7,13 +7,12 @@ import 'package:shop/models/product_model.dart';
 class HomeCl extends GetxController {
   ProductModel? product;
   List<ProductModel> products = [];
-  int a = 0;
 
   Future<void> fetchAlbum() async {
     final response =
         await http.get(Uri.parse('https://fakestoreapi.com/products'));
 
-    if (response.statusCode < 400) {
+    if (response.statusCode < 300) {
       final List<dynamic> json = jsonDecode(response.body);
 
       for (final map in json) {
@@ -24,5 +23,6 @@ class HomeCl extends GetxController {
     } else {
       throw Exception('Failed to load album');
     }
+    update();
   }
 }

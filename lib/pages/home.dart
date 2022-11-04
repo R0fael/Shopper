@@ -22,11 +22,8 @@ class Home extends StatelessWidget {
             primary: false,
             itemCount: controller.products.length,
             itemBuilder: (_, index) {
-              print("itemBuilder");
               return CardWidget(
-                name: controller.products[index].title,
-                cost: controller.products[index].price,
-                url: controller.products[index].image,
+                model: controller.products[index],
               );
             },
           ),
